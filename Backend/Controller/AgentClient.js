@@ -152,13 +152,13 @@ exports.registerClient = (async (request, response, next) => {
         var pindata1 = pindata.slice(1, 4);
         console.log("pindata1", pindata1);
 
-        if (typeof pincode === 'string' || Array.isArray(pincode)) {
+       /* if (typeof pincode === 'string' || Array.isArray(pincode)) {
             var clientCodeData = pincode.slice(3, 6);
-            return clientCodeData;
+            //return clientCodeData;
          // You can safely use the slice method here.
     } 
-        console.log("clientCodeData....", clientCodeData);
-        if (pindata1 == clientCodeData) {
+        console.log("clientCodeData....", clientCodeData);*/
+        if (pindata1) {
             const clientDetailsCheck = new ClientDetails();
             clientDetailsCheck.firstName = firstName;
             clientDetailsCheck.middleName = middleName;
