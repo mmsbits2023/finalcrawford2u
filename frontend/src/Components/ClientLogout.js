@@ -7,7 +7,7 @@ const ClientLogout = () => {
      const navigate = useNavigate();
     const [data, setData] = useState({
         email:'',
-        phoneNumber: '',
+        clientPhoneNumber: '',
         mpin:''
     });
     const handleInput = (event) => { 
@@ -15,7 +15,7 @@ const ClientLogout = () => {
     }
     const handleSubmit = async (e) => { 
         e.preventDefault();
-        const { email, phoneNumber, mpin } = data;
+        const { email, clientPhoneNumber, mpin } = data;
         const response = await fetch("https://finalcrawford.onrender.com/client/clientlogout", {
             method: "POST",
             headers: {
@@ -23,7 +23,7 @@ const ClientLogout = () => {
             },
             body: JSON.stringify({
                 email: email,
-                phoneNumber: phoneNumber,
+                clientPhoneNumber: clientPhoneNumber,
                 mpin:mpin
             })
         });
