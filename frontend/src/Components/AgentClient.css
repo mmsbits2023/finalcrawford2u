@@ -1,0 +1,31 @@
+
+.navdata{
+text-align: left;
+font-size: large;
+width: 70%;
+}
+.data{
+    margin-left: 50px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+.register{
+    margin-left: 5px;
+    width:40%;
+    height: auto;
+    display:inline-block;
+    padding: 4px;
+   
+}
+.button{
+    text-align: center;
+    
+}
+.footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
