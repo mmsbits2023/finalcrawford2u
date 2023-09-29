@@ -4,8 +4,11 @@ text-align: left;
 font-size: large;
 width: 70%;
 }
+.container{
+    width: 30%;
+}
 .data{
-    margin-left: 50px;
+    
     width: 100%;
     height: auto;
     text-align: center;
