@@ -8,7 +8,7 @@ const ClientRegister = () => {
         firstName: '',
         middleName: '',
         lastName: '',
-        phoneNumber: '',
+        clientPhoneNumber: '',
         whatsAppNumber: '',
         alternativeNumber: '',
         mpin:'',
@@ -18,7 +18,7 @@ const ClientRegister = () => {
         flatNumber: '',
         streetName: '',
       pinCode: '',
-        agentPhoneNumber:''
+        phoneNumber:''
     
     })
     const handleInput = (event) => { 
@@ -36,9 +36,9 @@ const ClientRegister = () => {
     const handleSubmit = async (e) => { 
         e.preventDefault();
         const { firstName, middleName, lastName,
-            phoneNumber, whatsAppNumber, alternativeNumber,
+            clientPhoneNumber, whatsAppNumber, alternativeNumber,
             email,mpin, adharCard, panCard, buildingName, flatNumber,
-            streetName, pinCode,agentPhoneNumber } = data;
+            streetName, pinCode,phoneNumber } = data;
         
         const response = await fetch("https://finalcrawford.onrender.com/client/clientregister", {
             method: "POST",
@@ -60,7 +60,7 @@ const ClientRegister = () => {
                 flatNumber: flatNumber,
                 streetName: streetName,
               pinCode: pinCode,
-                agentPhoneNumber:agentPhoneNumber,
+                clientPhoneNumber:clientPhoneNumber,
                           })
         });
         const result = await response.json();
