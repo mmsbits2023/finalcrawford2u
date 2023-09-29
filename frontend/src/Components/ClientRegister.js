@@ -11,7 +11,7 @@ const ClientRegister = () => {
         phoneNumber: '',
         whatsAppNumber: '',
         alternativeNumber: '',
-        password1:'',
+        mpin:'',
         adharCard: '',
         panCard: '',
         buildingName: '',
@@ -37,7 +37,7 @@ const ClientRegister = () => {
         e.preventDefault();
         const { firstName, middleName, lastName,
             phoneNumber, whatsAppNumber, alternativeNumber,
-            email,password1, adharCard, panCard, buildingName, flatNumber,
+            email,mpin, adharCard, panCard, buildingName, flatNumber,
             streetName, pinCode,agentPhoneNumber } = data;
         
         const response = await fetch("https://finalcrawford.onrender.com/client/clientregister", {
@@ -53,7 +53,7 @@ const ClientRegister = () => {
                 whatsAppNumber: whatsAppNumber,
                 alternativeNumber: alternativeNumber,
                 email: email,
-                password1:password1,
+                mpin:mpin,
                 adharCard: adharCard,
                 panCard: panCard,
                 buildingName: buildingName,
@@ -127,9 +127,9 @@ const ClientRegister = () => {
                  onChange={handleInput }/>
                   </div>
                   <div className="mb-1 register">
-                <label htmlFor="Password1Id" className="form-label">
+                <label htmlFor="mpinId" className="form-label">
                     Password</label>
-                      <input type="password" name="password1" className="form-control" id="password1Id" //autoComplete='off'
+                      <input type="password" name="mpin" className="form-control" id="mpinId" //autoComplete='off'
                  onChange={handleInput }/>
             </div>
             <div className="mb-1 register">
