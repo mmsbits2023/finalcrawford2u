@@ -48,7 +48,8 @@ const ClientRegister = () => {
             body: JSON.stringify({
                 firstName: firstName,
                 middleName: middleName,
-                lastName: lastName,
+              lastName: lastName,
+                clientPhoneNumber:clientPhoneNumber,
                 phoneNumber: phoneNumber,
                 whatsAppNumber: whatsAppNumber,
                 alternativeNumber: alternativeNumber,
@@ -60,7 +61,7 @@ const ClientRegister = () => {
                 flatNumber: flatNumber,
                 streetName: streetName,
               pinCode: pinCode,
-                clientPhoneNumber:clientPhoneNumber,
+                
                           })
         });
         const result = await response.json();
@@ -104,7 +105,7 @@ const ClientRegister = () => {
             </div>
             <div className="mb-1 register">
                 <label htmlFor="clientPhoneNumberId" className="form-label">
-                    PhoneNumber</label>
+                    ClientPhoneNumber</label>
                       <input type="text" name="clientPhoneNumber" className="form-control" id="clientPhoneNumber"//autocomplete="off"
                     onChange={handleInput } />
             </div>
