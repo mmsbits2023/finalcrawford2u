@@ -6,7 +6,7 @@ const ClientLogin = () => {
     const navigate = useNavigate();
     const [data, setData] = useState({
         email:'',
-        phoneNumber: '',
+        clientPhoneNumber: '',
         mpin:''
     });
     const handleInput = (event) => { 
@@ -14,7 +14,7 @@ const ClientLogin = () => {
     }
     const handleSubmit = async (e) => { 
         e.preventDefault();
-        const { email, phoneNumber, mpin } = data;
+        const { email, clientPhoneNumber, mpin } = data;
         const response = await fetch("https://finalcrawford.onrender.com/client/clientlogin", {
             method: "POST",
             headers: {
@@ -22,7 +22,7 @@ const ClientLogin = () => {
             },
             body: JSON.stringify({
                 email: email,
-                phoneNumber: phoneNumber,
+                clientPhoneNumber: clientPhoneNumber,
                 mpin:mpin
             })
         });
@@ -52,9 +52,9 @@ const ClientLogin = () => {
                       onChange={handleInput}/>
             </div>
             <div class="mb-1 data">
-                <label for="PhoneNumberId" className="form-label">
+                <label for="clientPhoneNumberId" className="form-label">
                     PhoneNumbe: </label>
-                      <input type="text" name="phoneNumber" className="form-control" id="phoneNumberId" //autocomplete="off" 
+                      <input type="text" name="clientPhoneNumber" className="form-control" id="clientPhoneNumberId" //autocomplete="off" 
                       onChange={handleInput}/>
             </div>
             <div className="mb-1 data">
