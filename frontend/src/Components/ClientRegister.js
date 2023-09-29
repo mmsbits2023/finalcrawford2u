@@ -103,9 +103,9 @@ const ClientRegister = () => {
                            onChange={handleInput }/>
             </div>
             <div className="mb-1 register">
-                <label htmlFor="PhoneNumberId" className="form-label">
+                <label htmlFor="clientPhoneNumberId" className="form-label">
                     PhoneNumber</label>
-                      <input type="text" name="phoneNumber" className="form-control" id="phoneNumber"//autocomplete="off"
+                      <input type="text" name="clientPhoneNumber" className="form-control" id="clientPhoneNumber"//autocomplete="off"
                     onChange={handleInput } />
             </div>
             <div className="mb-1 register">
@@ -169,9 +169,9 @@ const ClientRegister = () => {
                        onChange={handleInput }/>
           </div>
           <div className="mb-1 register">
-                <label htmlFor="agentPhoneNumberId" className="form-label">
+                <label htmlFor="phoneNumberId" className="form-label">
                     agentPhoneNumber</label>
-                      <input type="text" name="agentPhoneNumber" className="form-control" id="agentPhoneNumberId" //autocomplete="off"
+                      <input type="text" name="phoneNumber" className="form-control" id="phoneNumberId" //autocomplete="off"
                        onChange={handleInput }/>
                   </div>
                   
