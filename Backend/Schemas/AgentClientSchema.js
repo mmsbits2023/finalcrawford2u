@@ -157,8 +157,8 @@ exports.clientLoginSchema = {
         },
         mpin: {
             type: "string",
-            minLength: 6,
-            maxLength: 6,
+            minLength: 8,
+            maxLength: 8,
             pattern: "^[0-9()-.s]+$"
         }
     },
