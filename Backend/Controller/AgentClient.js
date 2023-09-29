@@ -148,8 +148,13 @@ exports.registerClient = (async (request, response, next) => {
         request.data = phoneNumber1[0];
         console.log("code of agent is", request.data.code);
         const pindata = request.data.code;
+        var pindata1 = pindata.slice(1, 4);
 
-        if (pindata.slice(1, 4) === pincode.slice(3, 6)) {
+         if (pincode && typeof pincode === 'string' && pincode.length >= 6) {
+            var clientCodeData = pincode.slice(3, 6);
+        }
+        console.log("clientCodeData....", pincode.slice(3, 6));
+        if (pindata1 == clientCodeData) {
             const clientDetailsCheck = new ClientDetails();
             clientDetailsCheck.firstName = firstName;
             clientDetailsCheck.middleName = middleName;
