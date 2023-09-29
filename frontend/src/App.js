@@ -9,7 +9,6 @@ import ClientLogin from './Components/ClientLogin';
 import AgentLogin from './Components/AgentLogin';
 import AgentLogout from './Components/AgentLogout';
 import ClientLogout from './Components/ClientLogout';
-import Product from './Components/Product';
 
 
 function App() {
