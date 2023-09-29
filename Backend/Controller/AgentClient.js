@@ -155,7 +155,7 @@ exports.registerClient = (async (request, response, next) => {
          if (pincode && typeof pincode === 'string' && pincode.length >= 6) {
             var clientCodeData = pincode.slice(3, 6);
         }
-        //console.log("clientCodeData....", pincode.slice(3, 6));
+        console.log("clientCodeData....", clientCodeData);
         if (pindata1 == clientCodeData) {
             const clientDetailsCheck = new ClientDetails();
             clientDetailsCheck.firstName = firstName;
