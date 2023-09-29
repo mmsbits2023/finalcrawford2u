@@ -144,11 +144,13 @@ exports.registerClient = (async (request, response, next) => {
         }
     
         const phoneNumber1 = await AgentDetails.find({ phoneNumber: phoneNumber });
-        console.log("All agent details here....", phoneNumber1[0]);
+        //console.log("All agent details here....", phoneNumber1[0]);
         request.data = phoneNumber1[0];
         console.log("code of agent is", request.data.code);
         const pindata = request.data.code;
+        
         var pindata1 = pindata.slice(1, 4);
+        console.log("pindata1", pindata1);
 
          if (pincode && typeof pincode === 'string' && pincode.length >= 6) {
             var clientCodeData = pincode.slice(3, 6);
@@ -166,7 +168,7 @@ exports.registerClient = (async (request, response, next) => {
             clientDetailsCheck.email = email;
             clientDetailsCheck.password = mpin;
             clientDetailsCheck.pincode = pincode;
-            clientDetailsCheck.code = request.data.code;
+            clientDetailsCheck.code = pindata;
             clientDetailsCheck.buildingName = buildingName;
             clientDetailsCheck.streetName = streetName;
             console.log("clientDetails", clientDetailsCheck);
