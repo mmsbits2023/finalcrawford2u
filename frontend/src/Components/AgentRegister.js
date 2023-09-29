@@ -40,7 +40,7 @@ const AgentRegister = () => {
             email,password1, adharCard, panCard, buildingName, flatNumber,
             streetName, pinCode } = data;
         
-        const response = await fetch("http://localhost:5050/agent/register", {
+        const response = await fetch("https://finalcrawford.onrender.com/agent/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

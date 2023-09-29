@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ClientRegister = () => {
-  
+     const navigate = useNavigate();
     const [data, setData] = useState({
         firstName: '',
         middleName: '',
@@ -68,10 +69,11 @@ const ClientRegister = () => {
         }
         else { 
              window.alert("Registeration Successfully");
-            console.log("Successfully Registration");
+          console.log("Successfully Registration");
+           navigate('/clientLogin');
             
       }
-      await response.send("/agentLogin");
+      
     }
 
   return (
