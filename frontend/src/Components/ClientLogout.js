@@ -53,15 +53,15 @@ const ClientLogout = () => {
                           onChange={handleInput}  />
                </div>     
             <div className="mb-1 data">
-                <label for="PhoneNumberId" className="form-label">
+                <label for="clientPhoneNumberId" className="form-label">
                     PhoneNumber: </label>
-                      <input type="text" name="phoneNumber" class="form-control" id="phoneNumberId" autocomplete="off"
+                      <input type="text" name="clientPhoneNumber" class="form-control" id="clientPhoneNumberId" autocomplete="off"
                     onChange={handleInput}      />
             </div>
             <div className="mb-1 data">
                 <label for="MpinId" className="form-label">
                     Password:</label>
-                      <input type="text" name="mpin" className="form-control" id="mpinId" autocomplete="off"
+                      <input type="password" name="mpin" className="form-control" id="mpinId" autocomplete="off"
                       onChange={handleInput}/>
             </div>
            

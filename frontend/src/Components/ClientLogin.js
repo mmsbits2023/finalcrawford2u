@@ -60,7 +60,7 @@ const ClientLogin = () => {
             <div className="mb-1 data">
                 <label for="MpinId" className="form-label">
                     Password:</label>
-                      <input type="text" name="mpin" className="form-control" id="mpinId" //autocomplete="off"
+                      <input type="password" name="mpin" className="form-control" id="mpinId" //autocomplete="off"
                 onChange={handleInput}      />
             </div>
            
