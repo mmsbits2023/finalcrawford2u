@@ -13,7 +13,7 @@ exports.generateRegisterSchema={
             minLength:8,
             maxLength:8,
           //pattern:"^[0-9()-.s]+$",
-            pattern:"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8}$"
+            pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
       },
       firstName: {
         type: "string",
@@ -78,7 +78,7 @@ exports.generateClientRegisterSchema={
             minLength:8,
             maxLength:8,
           //pattern:"^[0-9()-.s]+$",
-            pattern:"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8}$"
+            pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
       },
         firstName: {
         type: "string",
@@ -143,7 +143,7 @@ exports.verifyLoginSchema = {
             minLength: 8,
             maxLength: 8,
           // pattern: "^[0-9()-.s]+$"
-            pattern:"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8}$"
+            pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
         }
     },
     required: ["phoneNumber", "mpin"]
@@ -163,7 +163,7 @@ exports.clientLoginSchema = {
             minLength: 8,
             maxLength: 8,
           //pattern: "^[0-9()-.s]+$"
-            pattern:"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8}$"
+            pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
         }
     },
     required: ["clientPhoneNumber", "mpin"]
