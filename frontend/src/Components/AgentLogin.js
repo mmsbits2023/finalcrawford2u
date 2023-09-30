@@ -88,9 +88,9 @@ const AgentLogin = () => {
                        {errors.phoneNumber && <span className='errorData'>{ errors.phoneNumber}</span> }
             </div>
             <div className="mb-1 data">
-                <label htmlFor="password1Id" className="form-label">
+                <label htmlFor="mpinId" className="form-label">
                     Password:</label>
-                      <input type="password" name="mpin" className="form-control" id="password1Id" //autocomplete="off" 
+                      <input type="password" name="mpin" className="form-control" id="mpinId" //autocomplete="off" 
                           onChange={handleInput} />
                        {errors.mpin && <span className='errorData'>{ errors.mpin}</span> }
             </div>

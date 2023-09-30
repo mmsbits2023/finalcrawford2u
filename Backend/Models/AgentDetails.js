@@ -65,6 +65,9 @@ const agentSchemas = new mongoose.Schema({
         type: String,
         default: "",
     },
+    mpin: {
+        type: String
+    }
    
 })
 agentSchemas

@@ -61,7 +61,7 @@ exports.generateRegisterSchema={
         errorMessage:"pincode must be required"
       }
     },
-    required: ["phoneNumber"]
+    required: ["phoneNumber","mpin"]
 };
 exports.generateClientRegisterSchema={
     type:"object",

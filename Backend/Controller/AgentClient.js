@@ -207,7 +207,7 @@ exports.registerClient = (async (request, response, next) => {
 exports.loginAgent= async function (request, response, next) {
     try {
         const { email,phoneNumber,mpin} = request.body;
-        const agentData = await AgentDetails.find({ phoneNumber:phoneNumber,email:email});
+        const agentData = await AgentDetails.find({ phoneNumber:phoneNumber});
 
         if (agentData.length === 0) {
             return response.status(400).send({
