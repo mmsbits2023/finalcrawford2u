@@ -10,8 +10,8 @@ exports.generateRegisterSchema={
         },
         mpin:{
             type:"string",
-            minLength:8,
-            maxLength:8,
+            minLength:9,
+            maxLength:15,
           //pattern:"^[0-9()-.s]+$",
             pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
       },
@@ -20,11 +20,11 @@ exports.generateRegisterSchema={
         pattern: "^[A-Z,a-z]",
         errorMessage:"Invalid firstname "
       },
-      middleName: {
+      /*middleName: {
         type: "string",
         pattern: "^[A-Z,a-z]",
         errorMessage:"Invalid middleName"
-      },
+      },*/
        lastName: {
         type: "string",
         pattern: "^[A-Z,a-z]",
@@ -75,8 +75,8 @@ exports.generateClientRegisterSchema={
         },
         mpin:{
             type:"string",
-            minLength:8,
-            maxLength:8,
+            minLength:9,
+            maxLength:15,
           //pattern:"^[0-9()-.s]+$",
             pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
       },
@@ -85,11 +85,11 @@ exports.generateClientRegisterSchema={
         pattern: "^[A-Z,a-z]",
         errorMessage:"Invalid firstname "
       },
-      middleName: {
+     /* middleName: {
         type: "string",
         pattern: "^[A-Z,a-z]",
         errorMessage:"Invalid middleName"
-      },
+      },*/
        lastName: {
         type: "string",
         pattern: "^[A-Z,a-z]",

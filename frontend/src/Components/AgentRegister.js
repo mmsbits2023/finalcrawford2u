@@ -41,9 +41,7 @@ const AgentRegister = () => {
     if (!data.firstName) { 
       validationErrors.firstName='FirstName is required'
     }
-     if (!data.middleName) { 
-      validationErrors.middleName='MiddleName is required'
-    }
+    
      if (!data.lastName) { 
       validationErrors.lastName='LastName is required'
     }
@@ -80,10 +78,10 @@ const AgentRegister = () => {
 
     if (!data.mpin) {
       validationErrors.mpin = 'Password is required'
-    } else if (data.mpin.length < 8) {
-      validationErrors.mpin = "Password should be at least 8 char"
-    } else if (data.mpin.length > 8) {
-      validationErrors.mpin = "Password should be at least 8 char"
+    } else if (data.mpin.length < 9) {
+      validationErrors.mpin = "Password should be minimum 9 char or maximum 15 char"
+    } else if (data.mpin.length > 15) {
+      validationErrors.mpin = "Password should be minimum 9 char or maximum 15 char"
     }
                
     if (!data.adharCard) {
@@ -186,8 +184,8 @@ const AgentRegister = () => {
                     MiddleName</label>
                       <input type="text" name="middleName" className="form-control" id="MiddleNameId" //autocomplete="off"
               onChange={handleInput} />
-            {errors.middleName && <span className='errorData'>{ errors.middleName}</span> }
-            </div>
+          </div>
+          
             <div className="mb-1 register">
                 <label htmlFor="LastNameId" className="form-label">
                     LastName </label>
