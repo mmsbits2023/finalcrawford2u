@@ -19,7 +19,6 @@ exports.registerAgent = (async (request, response, next) => {
             adharCard,
             panCard,
             email,
-            password1,
             mpin,
             pinCode,
             buildingName,
@@ -84,7 +83,7 @@ exports.registerAgent = (async (request, response, next) => {
         agentDetailsCheck.adharCard = adharCard;
         agentDetailsCheck.panCard = panCard;
         agentDetailsCheck.email = email;
-       agentDetailsCheck.password = password1;
+       agentDetailsCheck.password = mpin;
         agentDetailsCheck.pinCode = pinCode;
        agentDetailsCheck.code = agentCode;
         agentDetailsCheck.buildingName = buildingName;
