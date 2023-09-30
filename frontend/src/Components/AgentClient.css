@@ -16,7 +16,7 @@ width: 70%;
 }
 .register{
     margin-left: 5px;
-    width:40%;
+    width:20%;
     height: auto;
     display:inline-block;
     padding: 4px;
@@ -31,4 +31,8 @@ width: 70%;
     background-color: black;
     color: white;
     text-align: center;
+}
+.errorData{
+    text-align: center;
+    color: red;
 }
