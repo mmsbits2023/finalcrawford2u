@@ -12,7 +12,7 @@ exports.generateRegisterSchema={
             type:"string",
             minLength:9,
             maxLength:15,
-          pattern:"^[(A-Z,a-z)0-9()-.s]+$",
+          pattern:"^[0-9()-.s]+$",
             //pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
       },
       firstName: {
@@ -77,7 +77,7 @@ exports.generateClientRegisterSchema={
             type:"string",
             minLength:9,
             maxLength:15,
-          pattern:"^[(A-Z,a-z)0-9()-.s]+$",
+          pattern:"^[0-9()-.s]+$",
             //pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
       },
         firstName: {
@@ -142,7 +142,7 @@ exports.verifyLoginSchema = {
             type: "string",
             minLength: 8,
             maxLength: 8,
-           pattern: "^[(A-Z,a-z)0-9()-.s]+$"
+           pattern: "^[0-9()-.s]+$"
             //pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
         }
     },
@@ -162,7 +162,7 @@ exports.clientLoginSchema = {
             type: "string",
             minLength: 8,
             maxLength: 8,
-          pattern: "^[(A-Z,a-z)0-9()-.s]+$"
+          pattern: "^[0-9()-.s]+$"
             //pattern:"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+[\]{}|;:',.<>?/\\-]{8,}$"
         }
     },
