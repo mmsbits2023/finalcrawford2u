@@ -488,51 +488,13 @@ exports.clientLogout = async (request, response, next) => {
             adharCard,
             panCard,
             email,
-            pincode,
+            pinCode,
             buildingName,
             streetName,
             code        
             } = request.body;
                
-            if (pincode.slice(3, 6) >= 1 && pincode.slice(3, 6) <= 10) {
-                var agentCodeData = "A" ;            
-        }
-            if (pincode.slice(3, 6) > 10 && pincode.slice(3, 6) <= 20) {
-                var agentCodeData = "B";
-            }
-            if (pincode.slice(3, 6) > 20 && pincode.slice(3, 6) <= 30) {
-                var agentCodeData = "C";
-        }
-        
-            if (pincode.slice(3, 6) > 30 && pincode.slice(3, 6) <= 40) {
-                var agentCodeData = "D";
-        }
-        
-            if (pincode.slice(3, 6) >40 && pincode.slice(3, 6) <= 50) {
-                var agentCodeData = "E" ;            
-        }
-            if (pincode.slice(3, 6) > 50 && pincode.slice(3, 6) <= 60) {
-                var agentCodeData = "F";
-            }
-            if (pincode.slice(3, 6) > 60 && pincode.slice(3, 6) <= 70) {
-                var agentCodeData = "G";
-        }
-        
-            if (pincode.slice(3, 6) > 70 && pincode.slice(3, 6) <= 80) {
-                var agentCodeData = "H";
-            }
-           if (pincode.slice(3, 6) > 80 && pincode.slice(3, 6) <= 90) {
-                var agentCodeData = "I";
-        }
-        
-            if (pincode.slice(3, 6) > 90 && pincode.slice(3, 6) <= 100) {
-                var agentCodeData = "J";
-            }
-          var agentCode =agentCodeData+
-            pincode.slice(3,6) +
-            firstName.slice(0, 1) +
-            middleName.slice(0, 1) +
-            lastName.slice(0, 1);
+           
        
        const agentDetails=await AgentDetails.findOne({phoneNumber:phoneNumber});
         console.log("agentDetails....",agentDetails);   
@@ -542,7 +504,45 @@ exports.clientLogout = async (request, response, next) => {
             status:"FAILURE",
             message:" Agent data not  found"
         }); 
-      }
+      } if (pinCode && typeof pinCode === 'string' && pinCode.length >= 6) {
+        var agentCodeData = pinCode.slice(3, 6);
+    }
+    console.log("agentCodeData....", pinCode.slice(3, 6));
+      
+        
+     let areaCodeLetter;
+    if (pinCode >= 400001 && pinCode <= 400010) {
+        areaCodeLetter = "A";
+    } else if (pinCode >= 400011 && pinCode <= 400020) {
+        areaCodeLetter = "B";
+    }
+    if (pinCode >= 400021 && pinCode <= 400030) {
+        areaCodeLetter = "C";
+    } else if (pinCode >= 400031 && pinCode <= 400040) {
+        areaCodeLetter = "D";
+    }if (pinCode >= 400041 && pinCode <= 400050) {
+        areaCodeLetter = "E";
+    } else if (pinCode >= 400051 && pinCode <= 400060) {
+        areaCodeLetter = "F";
+    }if (pinCode >= 400061 && pinCode <= 400070) {
+        areaCodeLetter = "G";
+    } else if (pinCode >= 400071 && pinCode <= 400080) {
+        areaCodeLetter = "H";
+    }if (pinCode >= 400081 && pinCode <= 400090) {
+        areaCodeLetter = "I";
+    } else if (pinCode >= 400091 && pinCode <= 400100) {
+        areaCodeLetter = "J";
+    }
+    
+    var agentCode =
+        areaCodeLetter +
+        agentCodeData+
+        firstName.charAt(0) +
+        middleName.charAt(0) +
+        lastName.charAt(0);
+   
+        
+   console.log("agent code is", agentCode);
       agentDetails.firstName=firstName;
       agentDetails.middleName=middleName;
       agentDetails.lastName=lastName;
@@ -551,7 +551,7 @@ exports.clientLogout = async (request, response, next) => {
         agentDetails.adharCard = adharCard;
         agentDetails.panCard = panCard;
         agentDetails.email = email;
-        agentDetails.pincode = pincode;
+        agentDetails.pinCode = pinCode;
         agentDetails.buildingName = buildingName;
         agentDetails.streetName = streetName;
         agentDetails.code= agentCode;   

@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc"
-      
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +22,7 @@
     "hbs": "^4.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.0.0",
-    "mongoose": "^5.10.0",
+    "mongoose": "^5.13.20",
     "uuid": "^9.0.0"
   }
 }

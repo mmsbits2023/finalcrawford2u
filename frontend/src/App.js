@@ -10,6 +10,8 @@ import ClientLogin from './Components/ClientLogin';
 import AgentLogin from './Components/AgentLogin';
 import AgentLogout from './Components/AgentLogout';
 import ClientLogout from './Components/ClientLogout';
+import AgentProfile from './Components/AgentProfile';
+import ClientProfile from './Components/ClientProfile';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path='/' />
           <Route path="/agentLogout" element={ <AgentLogout/>}/>
+          <Route path='clientProfile'element={<ClientProfile/>}/>
+          <Route path="/agentProfile"element={<AgentProfile/>}/>
           <Route path="/clientLogout" element={<ClientLogout/>} />
           <Route path="/agentRegister" element={ <AgentRegister/>}/>
           <Route path="/clientRegister" element={<ClientRegister />} />
